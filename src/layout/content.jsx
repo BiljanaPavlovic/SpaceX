@@ -1,11 +1,11 @@
 import React from "react";
 import PastLList from "../components/past-l-list";
 import UpcomingLList from "../components/upcoming-l-list";
-import { BrowserRouter as Router, Switch, Link, Route } from "react-router-dom";
+import { Switch, Link, Route } from "react-router-dom";
 
 const Content = () => {
   return (
-    <Router basename="/spaceX">
+    <div>
       <ul>
         <li>
           <Link to={"/"}>Past Launches</Link>
@@ -18,7 +18,7 @@ const Content = () => {
         <Route exact path="/" component={PastLList} />
         <Route exact path="/future" component={UpcomingLList} />
       </Switch>
-    </Router>
+    </div>
   );
 };
 export default Content;

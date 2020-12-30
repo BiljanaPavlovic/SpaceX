@@ -1,24 +1,25 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
-import PastLList from './components/past-l-list';
-import { getPastLaunches, getUpcomingLaunches } from './utility/space-x-service';
-import UpcomingLList from './components/upcoming-l-list';
 import Content from './layout/content';
 import { Footer } from './layout/footer';
 import { Header } from './layout/header';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 function App() {
-  
- // const [upcomingData, setUpcomingData] = useState([])
+
+  // const [upcomingData, setUpcomingData] = useState([])
 
 
 
 
   return (
     <div className="App">
-     <Header />
-     <Content />
-     <Footer />
+      <Router basename='/spaceX' >
+
+        <Header />
+        <Content />
+        <Footer />
+      </Router>
     </div>
   );
 }
