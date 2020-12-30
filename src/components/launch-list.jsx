@@ -8,6 +8,7 @@ const LaunchList = (props) => {
     return (
         <launchlist>
         {data.map(x=>{return <Launch launch={x} key={x.flight_number}/>})}
+     
         </launchlist>
     );
 }
